@@ -1,10 +1,14 @@
 import React from 'react';
-import './MyComponent.css'; // Import the CSS file
+import './MyComponent.css';
 
-const MyComponent: React.FC = () => {
+interface MyComponentProps {
+  title: string;
+}
+
+const MyComponent: React.FC<MyComponentProps> = ({ title }) => {
   return (
     <div className="my-component">
-      <h1>Hello from MyComponent!</h1>
+      <h1>{title}</h1>
       <p>This is a paragraph of text within my component.</p>
     </div>
   );
